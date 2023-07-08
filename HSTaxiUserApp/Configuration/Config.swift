@@ -35,7 +35,7 @@ let BRAIN_TREE_URL_SCHEMES = "com.app.towingsosuser.payments"
 //MARK: API Details
 //Base URL
 let BASE_URL = "https://towingsos.com:3000/api/"
-let demoBaseURl = "https://cabso.appkodes.in:3000/api/"
+let demoBaseURl = "http://testcabso.riddhi.info:3000/api/"
 
 let DEVICE_MODE = "1"
 //sub URL

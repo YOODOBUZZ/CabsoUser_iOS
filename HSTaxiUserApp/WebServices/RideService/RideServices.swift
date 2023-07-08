@@ -68,9 +68,9 @@ class RideServices: BaseWebService {
         requestDict.setValue(UserModel.shared.userID(), forKey: "user_id")
         requestDict.setValue(onride_id, forKey: "onride_id")
         requestDict.setValue(isNotify, forKey: "is_notify")
-        requestDict.setValue(carmake, forKey: "Make")
-        requestDict.setValue(carmodel, forKey: "Model")
-        requestDict.setValue(carcolor, forKey: "Color")
+        requestDict.setValue(carmake, forKey: "make")
+        requestDict.setValue(carmodel, forKey: "model")
+        requestDict.setValue(carcolor, forKey: "color")
         self.baseService(subURl: CONFIRM_RIDE_API, params: requestDict as? Parameters, onSuccess: {response in
             success(response)
         }, onFailure: {errorResponse in

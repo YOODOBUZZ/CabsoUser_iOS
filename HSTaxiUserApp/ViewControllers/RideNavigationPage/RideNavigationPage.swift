@@ -183,7 +183,7 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
         rateViewController.modalPresentationStyle = .overCurrentContext
         rateViewController.addCarDetails = { [self](_ carmodel: String, _ make: String, _ carcolor: String ) -> Void in
             if make == ""{
-                self.makeCarLbl.text = "Make"
+                self.makeCarLbl.text = "make"
                 self.addCarmake = make
             }else{
                 self.makeCarLbl.text = make
@@ -191,14 +191,14 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
             }
             
             if carmodel == ""{
-                self.modelCarLbl.text = "Model"
+                self.modelCarLbl.text = "model"
                 self.addCarmodel = carmodel
             }else{
                 self.modelCarLbl.text = carmodel
                 self.addCarmodel = carmodel
             }
             if carcolor == ""{
-                self.colorCarLbl.text = "Color"
+                self.colorCarLbl.text = "color"
                 self.addCarcolor = carcolor
             }else{
                 self.colorCarLbl.text = carcolor

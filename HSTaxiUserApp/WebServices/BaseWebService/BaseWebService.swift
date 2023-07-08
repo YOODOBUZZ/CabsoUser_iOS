@@ -14,8 +14,8 @@ public typealias Parameters = [String: Any]
 class BaseWebService: NSObject {
     // POST METHOD
     public func baseService(subURl: String, params: Parameters!, onSuccess success: @escaping (NSDictionary) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
-        let BaseUrl = URL(string: BASE_URL+subURl)
-        print("BASE URL : \(BASE_URL+subURl)")
+        let BaseUrl = URL(string: demoBaseURl+subURl)
+        print("BASE URL : \(demoBaseURl+subURl)")
         print("PARAMETER : \(params!)")
         if Utility().isConnectedToNetwork(){
             var header:HTTPHeaders? =  nil
@@ -84,8 +84,8 @@ class BaseWebService: NSObject {
     
     // GET METHOD
     public func getBaseService(subURl: String,onSuccess success: @escaping (NSDictionary) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
-        let BaseUrl = URL(string: BASE_URL+subURl)
-        print("BASE URL : \(BASE_URL+subURl)")
+        let BaseUrl = URL(string: demoBaseURl+subURl)
+        print("BASE URL : \(demoBaseURl+subURl)")
         if Utility().isConnectedToNetwork(){
             var header:HTTPHeaders? =  nil
             if(UserModel.shared.getAccessToken() != nil) {
@@ -151,8 +151,8 @@ class BaseWebService: NSObject {
     
     // DELETE  METHOD
     public func deleteMethod(subURl: String, params: Parameters!, onSuccess success: @escaping (NSDictionary) -> Void, onFailure failure: @escaping (_ error: Error?) -> Void) {
-        let BaseUrl = URL(string: BASE_URL+subURl)
-        print("BASE URL : \(BASE_URL+subURl)")
+        let BaseUrl = URL(string: demoBaseURl+subURl)
+        print("BASE URL : \(demoBaseURl+subURl)")
         print("PARAMETER : \(params!)")
         if Utility().isConnectedToNetwork(){
             var header:HTTPHeaders? =  nil

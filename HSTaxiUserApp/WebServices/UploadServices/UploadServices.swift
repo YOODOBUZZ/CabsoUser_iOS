@@ -13,8 +13,8 @@ class UploadServices: BaseWebService {
 
     //MARK: upload profiel pic service
     public func uploadProfilePic(profileimage:Data, onSuccess success: @escaping (NSDictionary) -> Void) {
-        let BaseUrl = URL(string: BASE_URL+PROFILE_PIC_API)
-        print("BASE URL : \(BASE_URL+PROFILE_PIC_API)")
+        let BaseUrl = URL(string: demoBaseURl+PROFILE_PIC_API)
+        print("BASE URL : \(demoBaseURl+PROFILE_PIC_API)")
         let parameters = ["user_id": UserModel.shared.userID()!]
         print("REQUEST : \(parameters)")
         print("data \(profileimage)")
