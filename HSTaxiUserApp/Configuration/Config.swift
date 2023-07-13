@@ -17,6 +17,7 @@ let APP_NAME = "TOWING SOS"
 
 //MARK: Setup Socket
 let SOCKET_URL = "https://towingsos.com:8081"
+let demoSocketURL = "https://testcabso.riddhi.info:8081"
 
 //MARK: Setup APP RTC URL
 let APP_RTC_URL = "YOUR_APP_RTC_URL"
@@ -35,7 +36,7 @@ let BRAIN_TREE_URL_SCHEMES = "com.app.towingsosuser.payments"
 //MARK: API Details
 //Base URL
 let BASE_URL = "https://towingsos.com:3000/api/"
-let demoBaseURl = "http://testcabso.riddhi.info:3000/api/"
+let demoBaseURl = "https://testcabso.riddhi.info:3000/api/"
 
 let DEVICE_MODE = "1"
 //sub URL

@@ -13,7 +13,7 @@ class Utility: NSObject {
     
     static let shared = Utility()
     static let language = Utility().getLanguage()
-
+    
     //MARK: Configure app language
     func configureLanguage()  {
         if let path = Bundle.main.path(forResource:UserModel.shared.getAppLanguage(), ofType: "json") {
@@ -118,14 +118,14 @@ class Utility: NSObject {
         }
         return false
     }
-  
+    
     func setAppLanguage(languageStr: NSString){
         UserDefaults.standard.set(languageStr, forKey: "language")
     }
     func getAppLanguage() -> NSString? {
         return UserDefaults.standard.value(forKey: "language") as? NSString
     }
-
+    
     
     //MARK:set App language
     func setDefaultLanguage(languageDict: NSDictionary){
@@ -149,7 +149,7 @@ class Utility: NSObject {
         var newDate = NSDate()
         let trimmedIsoString = date.replacingOccurrences(of: "\\.\\d+", with: "", options: .regularExpression)
         newDate = format.date(from: trimmedIsoString)! as NSDate
-       
+        
         //new format
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEE, MMM d, yyyy, h:mm a"
@@ -288,7 +288,7 @@ class Utility: NSObject {
         
         return ""
     }
-
+    
     
     //draw dotted line from pickup to destination
     func drawDottedLine(start p0: CGPoint, end p1: CGPoint,label:UILabel) {
@@ -332,6 +332,22 @@ class Utility: NSObject {
         }
         dateFormat.dateFormat = format
         return dateFormat.string(from: dateNew)
+    }
+    
+    func removeSuffic(_ getDistance: String, _ changeString: String) -> String{
+        if getDistance.hasSuffix(changeString) {
+            let name = getDistance.prefix(getDistance.count - changeString.count)
+            print(name)
+            return String(name)
+        }
+        return getDistance
+    }
+    
+    func distanceString(for distance: Double) -> Double {
+        let distanceMeters = Measurement(value: distance, unit: UnitLength.kilometers)
+        let distanceMiles = distanceMeters.converted(to: UnitLength.miles)
+        let miles = distanceMeters.converted(to: UnitLength.miles).value
+        return miles
     }
 }
 extension Double {

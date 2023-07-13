@@ -1861,7 +1861,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HSTaxiUserApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "TOWING SOS";

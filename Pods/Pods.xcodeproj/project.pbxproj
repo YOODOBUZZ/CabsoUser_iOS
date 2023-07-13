@@ -14356,7 +14356,7 @@
 			baseConfigurationReference = 37F40B2E770EEB7DBF6B7ADF6E25D1C1 /* FirebaseUI.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				IBSC_MODULE = FirebaseUI;
 				INFOPLIST_FILE = "Target Support Files/FirebaseUI/ResourceBundle-FirebasePhoneAuthUI-FirebaseUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -15000,7 +15000,7 @@
 			baseConfigurationReference = 9914B800DDDE4CE344FBF043C9E19F87 /* FirebaseUI.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				IBSC_MODULE = FirebaseUI;
 				INFOPLIST_FILE = "Target Support Files/FirebaseUI/ResourceBundle-FirebasePhoneAuthUI-FirebaseUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -15235,7 +15235,7 @@
 			baseConfigurationReference = 9914B800DDDE4CE344FBF043C9E19F87 /* FirebaseUI.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				IBSC_MODULE = FirebaseUI;
 				INFOPLIST_FILE = "Target Support Files/FirebaseUI/ResourceBundle-FirebaseAuthUI-FirebaseUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -15329,7 +15329,7 @@
 			baseConfigurationReference = AF766C379090EE4A29C482E77DCEBECD /* BraintreeDropIn.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BraintreeDropIn";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				IBSC_MODULE = BraintreeDropIn;
 				INFOPLIST_FILE = "Target Support Files/BraintreeDropIn/ResourceBundle-Braintree-UIKit-Localization-BraintreeDropIn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -16308,7 +16308,7 @@
 			baseConfigurationReference = 4964A935F37BEBC3C287A3F35636954A /* BraintreeDropIn.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BraintreeDropIn";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				IBSC_MODULE = BraintreeDropIn;
 				INFOPLIST_FILE = "Target Support Files/BraintreeDropIn/ResourceBundle-Braintree-UIKit-Localization-BraintreeDropIn-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -16357,7 +16357,7 @@
 			baseConfigurationReference = 37F40B2E770EEB7DBF6B7ADF6E25D1C1 /* FirebaseUI.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/FirebaseUI";
-				DEVELOPMENT_TEAM = PQH88KC8RZ;
+				DEVELOPMENT_TEAM = FMTY3KLD4A;
 				IBSC_MODULE = FirebaseUI;
 				INFOPLIST_FILE = "Target Support Files/FirebaseUI/ResourceBundle-FirebaseAuthUI-FirebaseUI-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

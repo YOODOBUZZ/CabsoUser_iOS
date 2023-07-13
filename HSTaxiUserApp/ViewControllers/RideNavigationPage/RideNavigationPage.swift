@@ -124,7 +124,7 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
     var addCarmodel = ""
     var addCarmake = ""
     var addCarcolor = ""
-
+    
     @IBOutlet weak var dateDismissBtn: UIButton!
     var alertStatus = ""
     
@@ -181,9 +181,11 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
         let rateViewController = CarModelPopUp()
         rateViewController.modalTransitionStyle = .crossDissolve
         rateViewController.modalPresentationStyle = .overCurrentContext
+        
         rateViewController.addCarDetails = { [self](_ carmodel: String, _ make: String, _ carcolor: String ) -> Void in
+            
             if make == ""{
-                self.makeCarLbl.text = "make"
+                self.makeCarLbl.text = "Make"
                 self.addCarmake = make
             }else{
                 self.makeCarLbl.text = make
@@ -191,20 +193,23 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
             }
             
             if carmodel == ""{
-                self.modelCarLbl.text = "model"
+                self.modelCarLbl.text = "Model"
                 self.addCarmodel = carmodel
             }else{
                 self.modelCarLbl.text = carmodel
                 self.addCarmodel = carmodel
             }
             if carcolor == ""{
-                self.colorCarLbl.text = "color"
+                self.colorCarLbl.text = "Color"
                 self.addCarcolor = carcolor
             }else{
                 self.colorCarLbl.text = carcolor
                 self.addCarcolor = carcolor
             }
         }
+        rateViewController.carMake =  self.makeCarLbl.text ?? ""
+        rateViewController.carModel =  self.modelCarLbl.text ?? ""
+        rateViewController.carColor =  self.colorCarLbl.text ?? ""
         self.present(rateViewController, animated: true, completion: nil)
     }
     func changeToRTL() {
@@ -748,9 +753,20 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
                 if finalStatus == "ZERO_RESULTS" {
                     self.animateView(view: self.no_resultView)
                 }else{
-                    self.timeKmLbl.text = "\(distanceDict.value(forKeyPath: "duration.text") as! String)(\(distanceDict.value(forKeyPath: "distance.text") as! String))"
+                    let getDistance = distanceDict.value(forKeyPath: "distance.text") as! String
+                    var setValue = " km"
+                    setValue = " m"
+                    let value = Utility.shared.removeSuffic(getDistance, setValue)
+                    let convertDouble = Double(value)
+                    let changeTomiles = Utility.shared.distanceString(for: convertDouble!)
+                    let doubletoStr = String(format: "%.1f", changeTomiles)
+                    let getMitoDistance = "\(doubletoStr) mi"
+                    DispatchQueue.main.async {
+                        self.timeKmLbl.text = "\(distanceDict.value(forKeyPath: "duration.text") as! String)(\(getMitoDistance))"
+                    }
+                   
                     if type == "new"{
-                        self.getAvailableRides(km:distanceDict.value(forKeyPath: "distance.text") as! String)
+                        self.getAvailableRides(km: getMitoDistance)
                     }
                 }
             }
@@ -1259,6 +1275,8 @@ extension RideNavigationPage:UICollectionViewDelegate,UICollectionViewDataSource
         return radiansToDegrees(radians: radiansBearing)
     }
     
+    
 }
+
 
 

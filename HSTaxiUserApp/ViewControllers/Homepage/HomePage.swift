@@ -13,7 +13,7 @@ import GooglePlacePicker
 import IQKeyboardManagerSwift
 import SocketIO
 
-let socket = SocketManager(socketURL: URL(string: SOCKET_URL)!, config: [.log(true), .compress])
+let socket = SocketManager(socketURL: URL(string: demoSocketURL)!, config: [.log(true), .compress])
 
 class HomePage: UIViewController,GMSMapViewDelegate,CLLocationManagerDelegate,UITextFieldDelegate{
    

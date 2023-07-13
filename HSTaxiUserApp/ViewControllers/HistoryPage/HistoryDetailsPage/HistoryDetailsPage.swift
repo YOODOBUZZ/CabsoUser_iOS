@@ -259,7 +259,7 @@ class HistoryDetailsPage: UIViewController {
         let tax:NSNumber = rideDict.value(forKey: "ride_tax") as! NSNumber
         let totalAmt:NSNumber = rideDict.value(forKey: "ride_total") as! NSNumber
         let km:CGFloat = rideDict.value(forKey: "distance") as! CGFloat
-        self.meterPriceLbl.text = "\(km) km"
+        self.meterPriceLbl.text = "\(km) Miles"
         let pickupTime = (rideDict.value(forKey: "pickup_time") as AnyObject).doubleValue
         self.pickupTimeLbl.text = Utility.shared.timeStamp(stamp: pickupTime!, format: "h:mm a")
         let dropTime = (rideDict.value(forKey: "drop_time") as AnyObject).doubleValue
