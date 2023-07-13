@@ -761,6 +761,7 @@ class RideNavigationPage: UIViewController,GMSMapViewDelegate,CLLocationManagerD
                     let changeTomiles = Utility.shared.distanceString(for: convertDouble!)
                     let doubletoStr = String(format: "%.1f", changeTomiles)
                     let getMitoDistance = "\(doubletoStr) mi"
+                    print(getMitoDistance)
                     DispatchQueue.main.async {
                         self.timeKmLbl.text = "\(distanceDict.value(forKeyPath: "duration.text") as! String)(\(getMitoDistance))"
                     }
